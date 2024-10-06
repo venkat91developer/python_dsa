@@ -9,7 +9,7 @@ items = [
     {"id": 3, "name": "Item 3"},
 ]
 
-@app.route('/items', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_items():
     return jsonify(items)
 
