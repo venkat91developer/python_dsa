@@ -1,27 +1,92 @@
-# VenkatDsaPortfolio
-  
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+# Background Remover Web App
 
-## Development server
+This is a simple web application built with Python and Flask that removes the background from an image using the `rembg` library. The user can upload an image, view the processed image with the background removed, and optionally download the result.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Upload an image in any common format (JPEG, PNG, etc.).
+- View the image with the background removed directly on the web page.
+- Download the processed image as a PNG file.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+### Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Python 3.x
+- pip (Python package installer)
 
-## Running unit tests
+### Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Clone the repository**:
 
-## Running end-to-end tests
+   ```bash
+   git clone https://github.com/redianmarku/image-background-remover-website
+   cd image-background-remover-website
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. **Create a virtual environment** (optional but recommended):
 
-## Further help
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. **Install the required dependencies**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the application**:
+
+   ```bash
+   python app.py
+   ```
+
+5. **Access the app**:
+   - Open your web browser and go to `http://127.0.0.1:5000/`.
+
+## Usage
+
+1. **Upload an Image**:
+   - On the homepage, click the "Choose File" button to select an image from your device.
+2. **Remove Background**:
+   - Click the "Remove Background" button to process the image.
+3. **View and Download**:
+   - The processed image will be displayed on the page. You can download it by clicking the "Download Image" button.
+
+## Project Structure
+
+```plaintext
+background-remover-web-app/
+│
+├── app.py                # The main Flask application
+├── templates/
+│   └── index.html        # HTML template for the web interface
+├── requirements.txt      # List of dependencies
+└── README.md             # Project documentation
+```
+
+## Dependencies
+
+- Flask: A lightweight WSGI web application framework in Python.
+- rembg: A tool to remove the background from images.
+- Pillow: Python Imaging Library, which adds image processing capabilities to your Python interpreter.
+
+To install the dependencies, use:
+
+```bash
+pip install Flask rembg Pillow
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contributing
+
+If you want to contribute to this project, feel free to submit a pull request or open an issue with your ideas or suggestions.
+
+## Contact
+
+For any inquiries or feedback, feel free to contact me at [redian@topnotch-programmer.com].
