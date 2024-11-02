@@ -1,2 +1,1 @@
-flask_api/cache/*
-flask_api/venv/*
+flask_api/flask_app/app/__init__.py
