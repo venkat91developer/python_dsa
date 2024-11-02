@@ -1,0 +1,1 @@
+# Placeholder for user view logic, can be used if rendering templates is required.
