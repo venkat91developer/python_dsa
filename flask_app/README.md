@@ -1,27 +1,93 @@
-# VenkatDsaPortfolio
-  
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+## Installation
 
-## Development server
+### Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Python 3.x
+- pip (Python package installer)
 
-## Code scaffolding
+### Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone the repository**:
 
-## Build
+   ```bash
+   git clone https://github.com/redianmarku/image-background-remover-website
+   cd image-background-remover-website
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Create a virtual environment** (optional but recommended):
 
-## Running unit tests
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. **Install the required dependencies**:
 
-## Running end-to-end tests
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. **Run the application**:
 
-## Further help
+   ```bash
+   python app.py
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+5. **Access the app**:
+   - Open your web browser and go to `http://127.0.0.1:5000/`.
+
+
+
+# Flask User Registration and Login API
+
+This is a simple Flask application for user registration and login functionalities.
+
+## Features
+
+- User Registration
+- User Login
+
+## Installation
+
+1. Clone the repository
+2. Navigate to the project directory
+3. Install the requirements:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Create the database:
+   ```bash
+   flask create_db
+   ```
+5. Run the application:
+   ```bash
+   python app.py
+   ```
+
+## Usage
+
+Use tools like Postman or cURL to interact with the API.
+
+### Register a user
+
+**POST** `/register` with JSON body:
+```json
+{
+    "username": "testuser",
+    "password": "testpass"
+}
+```
+
+### Login a user
+
+**POST** `/login` with JSON body:
+```json
+{
+    "username": "testuser",
+    "password": "testpass"
+}
+```
+
+## License
+
+This project is licensed under the MIT License.
