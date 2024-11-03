@@ -12,4 +12,7 @@ def create_app():
     
     db.init_app(app)
     
+    from .routes import user_bp  # Import the user blueprint
+    app.register_blueprint(user_bp)
+
     return app
