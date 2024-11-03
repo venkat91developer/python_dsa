@@ -1,6 +1,8 @@
 from flask import jsonify
 from app.Database.db import Database
 import time
+import random
+
 class Music:
     def __init__(self,music_id=None):
         self.music_id = music_id
@@ -10,6 +12,11 @@ class MusicPlayer:
         if not self.db_conn.table_exists("music"):
             self.db_conn.create_table("music")
     def createMusic(self, title, artist, image_path, file_path):
+        timestamp = int(time.time())
+        # data = {id: timestamp,timestamp:timestamp,title:title,artist:artist,image_path:image_path,file_path:file_path}
+        # print(data)
+        # self.db_conn.insert("music", {"id": 1, "name": "Alice", "age": 30})
+        # self.db_conn.insert("music", )
         return {
             'status': 'success',
             'message': 'Music created successfully',
