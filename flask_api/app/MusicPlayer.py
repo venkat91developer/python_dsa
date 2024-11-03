@@ -2,7 +2,8 @@ from flask import jsonify
 from app.Database.db import Database
 import time
 import random
-
+import requests
+import os
 class Music:
     def __init__(self,music_id=None):
         self.music_id = music_id
@@ -31,6 +32,12 @@ class MusicPlayer:
             'image_path': image_path,
             'file_path': file_path
         }
-    def getMusic(self):
-
-        return jsonify({'status': 'Inside function'}), 200 
+    def getMusic(self, play_audio=True):
+        if play_audio:
+            all_music = self.db_conn.fetch_all("music")
+            return jsonify({
+                "status":"success",
+                "data":all_music
+            }), 200
+        else:
+            return jsonify({'status': 'Inside function'}), 200

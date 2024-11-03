@@ -2,7 +2,7 @@ import networkx as nx
 import os
 import time
 import osmnx as ox
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,send_from_directory
 from flask_cors import CORS 
 from app.MusicPlayer import MusicPlayer
 
@@ -33,5 +33,8 @@ def createMusic():
 def getMusic():
     return music_player.getMusic()
 
+@app.route('/uploads/<path:filename>')
+def send_file(filename):
+    return send_from_directory('uploads', filename)
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
