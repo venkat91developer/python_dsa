@@ -13,10 +13,16 @@ class MusicPlayer:
             self.db_conn.create_table("music")
     def createMusic(self, title, artist, image_path, file_path):
         timestamp = int(time.time())
-        # data = {id: timestamp,timestamp:timestamp,title:title,artist:artist,image_path:image_path,file_path:file_path}
-        # print(data)
-        # self.db_conn.insert("music", {"id": 1, "name": "Alice", "age": 30})
-        # self.db_conn.insert("music", )
+        self.db_conn.insert("music",
+        {
+        "id": timestamp, 
+        "timestamp": timestamp, 
+        "title": title,
+        "artist":artist,
+        "image_path":image_path,
+        "file_path":file_path
+        }
+        )
         return {
             'status': 'success',
             'message': 'Music created successfully',
